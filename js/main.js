@@ -4,7 +4,11 @@ console.log(cadena.length);
 
 const listapedidos = [];
 while (true) {
-    const elegiritem = prompt('Ingrese un comando: "agregar nuevo item", "eliminar", "buscar en la lista".');
+    const elegiritem = prompt('Ingrese un comando: "agregar nuevo item", "eliminar", "buscar en la lista" , "salir".');
+
+    if (elegiritem == "salir") {
+        break;
+    }
 
     switch (elegiritem) {
         case "agregar nuevo item":
