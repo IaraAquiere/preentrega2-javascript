@@ -1,11 +1,44 @@
-header{
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-header img{
+
+header img {
     height: 150px;
 }
-footer{
-    background-color: rgb(51, 34, 206);
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(243, 127, 49);
+}
+
+.redes {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.redes li {
+    margin: 10px;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+
+.footer__barra-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    margin: 0px 30px;
+}
+
+.footer__barra-contacto ul {
+    margin-bottom: 0;
+    padding-left: 0;
 }
