@@ -14,3 +14,13 @@ let productos = [
     { id: 13, nombre: "Mochila Edea Libra", Imagen:"https://tcdn.storeden.com/gallery/649da48e00f2203372c66b77", precio:37.50, categoria:"bolsos" },
     { id: 14, nombre: "Bolsa Portapatines Edea Jaquard", Imagen:"https://tcdn.storeden.com/gallery/61377b83202628621985a57e", precio:19.00, categoria:"bolsos" }
 ];
+
+const guardarproductols= (productos)=> {
+    localStorage.setItem("productos", JSON.stringify(productos));
+}
+
+const cargarproductos = () =>{
+    return json.parse(localStorage.getItem("productos")) || []; 
+}
+
+guardarproductols(productos)
