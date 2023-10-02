@@ -23,4 +23,24 @@ const cargarproductos = () =>{
     return json.parse(localStorage.getItem("productos")) || []; 
 }
 
-guardarproductols(productos)
+guardarproductols(productos);
+
+const renderproductos = () => {
+    const productos = cargarproductosls();
+    let contenidoHTML = "";
+
+    productos.array.forEach(producto => {
+        contenidoHTML += `<div class="card" style="width: 18rem;">
+        <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+        <div class="card-body">
+          <h5 class="card-title">${producto.nombre}</h5>
+          <p class="card-text">${producto.precio}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>`
+    });
+    
+    document.getElementById("productos").innerHTML = contenidoHTML;
+}
+
+renderproductos();
